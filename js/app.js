@@ -28,10 +28,24 @@ const icons = ["fa fa-diamond", "fa fa-paper-plane-o", "fa fa-anchor", "fa fa-bo
  //Create Click event
  
  card.addEventListener("click", function() {
- 		//showing the icons
- 		card.classList.add("open", "show");
- 		console.log("Flip the damn cards already!");
- 		flipUpCards.push(this);
+ 
+ 		//existing card are open and face up
+ 		if(flipUpCards.length === 1) {
+ 			card.classList.add("open", "show");
+ 			console.log("Flip the damn cards already!");
+ 			flipUpCards.push(this);
+ 			 }
+ 		else { //cards are flipped down
+ 		 
+ 		 card.classList.add("open", "show");
+ 			console.log("I'm officially pissed");
+ 			flipUpCards.push(this);
+ 		 
+ 		 }
+ 		
+ 		
+ 		//supposed to be showing the icons
+ 		
  		});
  		
  } //The goal is to put card 1 and card 2 in an array and compare them. 
